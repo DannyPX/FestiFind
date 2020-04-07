@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <transition name="slide" mode="out-in">
+    <router-view/>
+  </transition>
 </template>
 
 <script>
-import HelloWorld from './view/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  margin: 1em;
+}
+
+.slide-enter-active {
+    animation: slide-in .3s ease-in forwards;
+}
+
+.slide-leave-active {
+    animation: slide-out .3s ease-in forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-3em);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-3em);
+        opacity: 0;
+    }
 }
 </style>
