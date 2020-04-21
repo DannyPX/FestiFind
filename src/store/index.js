@@ -1,20 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-//import axios from 'axios'
+import festival from './modules/festival'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state: {
-
-    },
-    mutations: {
-
-    },
-    actions: {
-
-    },
-    getters: {
-        
+    modules: {
+        festival
     }
 })
