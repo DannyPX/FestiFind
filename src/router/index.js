@@ -14,6 +14,16 @@ const routes = [
         path: '/festival',
         name: 'festival',
         component: () => import('../view/Festival.vue')
+    },
+    {
+        path: '/festival/:id',
+        name: 'festivalInfo',
+        component: () => import('../view/FestivalInfo.vue')
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('../view/Login.vue')
     }
 ]
 

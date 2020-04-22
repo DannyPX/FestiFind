@@ -2,6 +2,7 @@
   <div class="main">
     <header>
       <router-link to="/festival">Festival</router-link>
+      <router-link to="/login">Login</router-link>
     </header>
   </div>
 </template>
